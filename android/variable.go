@@ -20,6 +20,8 @@ import (
 	"runtime"
 	"strings"
 
+	"extras/soong/android"
+
 	"github.com/google/blueprint/proptools"
 )
 
@@ -94,6 +96,9 @@ type variableProperties struct {
 		Pdk struct {
 			Enabled *bool
 		}
+
+		// include Custom variables
+		*android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -163,7 +168,10 @@ type productVariables struct {
 	BtConfigIncludeDir *string `json:",omitempty"`
 
 	Override_rs_driver *string `json:",omitempty"`
-	BoardUsesQTIHardware *bool `json:",omitempty"`
+	BoardUsesQTIHardware    *bool `json:",omitempty"`
+
+	// include Custom variables
+	*android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
