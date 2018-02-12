@@ -47,7 +47,8 @@ var (
 		"-fno-canonical-system-headers",
 
 		// HOST_RELEASE_CFLAGS
-		"-O3", // from build/core/combo/select.mk
+		"-O2", // from build/core/combo/select.mk
+		"-g",  // from build/core/combo/select.mk
 		"-fno-strict-aliasing", // from build/core/combo/select.mk
 
 		// Tell clang where the gcc toolchain is
@@ -104,7 +105,7 @@ func (t *toolchainLinuxBionic) GccTriple() string {
 }
 
 func (t *toolchainLinuxBionic) GccVersion() string {
-	return "6.x"
+	return "4.9"
 }
 
 func (t *toolchainLinuxBionic) Cflags() string {

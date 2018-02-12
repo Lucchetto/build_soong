@@ -46,7 +46,7 @@ var (
 
 		// TARGET_RELEASE_CFLAGS
 		"-DNDEBUG",
-		"-O3",
+		"-g",
 		"-Wstrict-aliasing=2",
 		"-fgcse-after-reload",
 		"-frerun-cse-after-loop",
@@ -165,7 +165,7 @@ var (
 )
 
 const (
-	armGccVersion = "6.x"
+	armGccVersion = "4.9"
 )
 
 func init() {
