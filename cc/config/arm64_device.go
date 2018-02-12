@@ -46,7 +46,7 @@ var (
 
 		// TARGET_RELEASE_CFLAGS
 		"-DNDEBUG",
-		"-O2",
+		"-O2 -g",
 		"-Wstrict-aliasing=2",
 		"-fgcse-after-reload",
 		"-frerun-cse-after-loop",
