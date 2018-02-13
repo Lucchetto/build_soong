@@ -47,7 +47,7 @@ var (
 		"-fno-canonical-system-headers",
 
 		// HOST_RELEASE_CFLAGS
-		"-O3", // from build/core/combo/select.mk
+		"-O2", // from build/core/combo/select.mk
 		"-g",  // from build/core/combo/select.mk
 		"-fno-strict-aliasing", // from build/core/combo/select.mk
 
